@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:vega0400/pantallas0400/panel0400/panel_pantalla0400.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiAppDulceria0400());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiAppDulceria0400 extends StatelessWidget {
+  const MiAppDulceria0400({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      debugShowCheckedModeBanner: false,
+      title: "Dulceria Vega0400",
       theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurpleAccent),
+          useMaterial3: true),
+      home: PanelPantalla0400(),
     );
   }
 }
